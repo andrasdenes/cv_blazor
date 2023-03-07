@@ -1,0 +1,11 @@
+﻿global using CV;
+global using CV.Common;
+global using CV.Communication;
+global using CV.Services;
+global using Microsoft.AspNetCore.Components;
+global using Microsoft.AspNetCore.Components.Web;
+global using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+global using Blazorise;
+global using Blazorise.Bootstrap;
+global using Blazorise.Icons.FontAwesome;
+global using Markdig;

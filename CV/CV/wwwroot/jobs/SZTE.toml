@@ -1,0 +1,17 @@
+﻿job_title = "Python Developer"
+company_name = "University of Szeged"
+company_url = "https://www.inf.u-szeged.hu/rgai"
+image = "https://www.inf.u-szeged.hu/sites/default/files/logo_intezet.jpg"
+image_alt = "szte"
+from = 2020.09
+to = 2021.07
+description = """
+The job I took at my university required me to develop a deep understanding of **python** and more importantly **Django**.
+Essentially, I was working on a website, that opened up a convenient user interface on top of an AI-driven application.
+The project's focus was to optimally match possible partner companies, filter for competitors, analyze market competition or perhaps determine if expanding bussiness to a given target country is worth it.
+This was/is actually an EU-financed software solution that should benefit all companies in the world - European or otherwise.
+I got familiar with **databases (SQL and DocumentDBs, mostly)**, I learnt how to use **Bootstrap** well, I got to know the **jinja2** templating engine,
+I became quite confident with **Django**, its migrations system (and fixing migration issues when things go sideways), I got to know **javascript, jquery, chart.js** and a whole bunch of other js package. 
+Data processing with **pandas and numpy** is something I got quite good at. The occasional **nginx config** fix was just a lovely cherry on top of everything.  
+"""
+tags =["python", "django", "pandas", "numpy", "SQL", "noSQL", "database", "DB", "Bootstrap", "Jinja2", "HTML", "CSS", "nginx", "web", "REST"]

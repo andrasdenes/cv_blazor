@@ -1,0 +1,37 @@
+﻿@page "/CV"
+<PageTitle>Career so far</PageTitle>
+<Text Class="h3">My professional career so far</Text>
+<Button Color=Color.Primary>Click<Icon Name="IconName.Download" /></Button>
+<CardDeck Class="mt-3">
+    @foreach(Job job in Jobs)
+    {
+        <Card>
+            <CardImage Source="@job.Image" Alt="@job.ImageAlt"></CardImage>
+            <CardBody>
+                <CardTitle Size="5">
+                    @job.JobTitle @@ <a href="@job.CompanyUrl" target="_blank">@job.CompanyName</a>
+                </CardTitle>
+                <CardSubtitle Class="p-1">
+                    From: @job.From
+                </CardSubtitle>
+                @if (!string.IsNullOrEmpty(job.To))
+                {
+                    <CardSubtitle Class="p-1">
+                        To: @job.To
+                    </CardSubtitle>
+                }
+                else
+                {
+                    <CardSubtitle Class="p-1">
+                        <Text TextColor="TextColor.Success">Ongoing</Text>
+                    </CardSubtitle>
+                }
+
+                <CardText>
+                    @((MarkupString)Markdig.Markdown.ToHtml(job.Description ?? string.Empty))
+                </CardText>
+                <Button Color="Color.Primary">Button</Button>
+            </CardBody>
+        </Card>    
+    }
+</CardDeck>

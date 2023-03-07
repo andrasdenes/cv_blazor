@@ -1,0 +1,50 @@
+﻿<LayoutSider>
+    <Bar Mode="BarMode.VerticalInline"
+         CollapseMode="BarCollapseMode.Small"
+         Breakpoint="Breakpoint.Desktop"
+         NavigationBreakpoint="Breakpoint.Tablet"
+         ThemeContrast="ThemeContrast.Light">
+        <BarBrand>
+            <BarItem>
+                <BarLink To="/">
+                    <BarIcon IconName="IconName.User" />
+                    <span class="pl-3"> Dénes András</span>
+                </BarLink>
+            </BarItem>
+        </BarBrand>
+        <BarMenu>
+            <BarStart>
+                <BarItem>
+                    <BarLink To="CV">
+                        <BarIcon IconName="IconName.Dashboard" />
+                        <span class="pl-3">CV</span>
+                    </BarLink>
+                </BarItem>
+                <BarItem>
+                    <BarDropdown>
+                        <BarDropdownToggle>
+                            <BarIcon IconName="IconName.Book" />
+                            <span class="pl-3">Blog</span>
+                        </BarDropdownToggle>
+                        <BarDropdownMenu>
+                            <BarDropdownItem>Action</BarDropdownItem>
+                            <BarDropdownItem>Another action</BarDropdownItem>
+                        </BarDropdownMenu>
+                    </BarDropdown>
+                    <BarDropdown Visible=true>
+                        <BarDropdownToggle>
+                            <BarIcon IconName="IconName.Cloud" />
+                            <span class="pl-3">Projects</span>
+                        </BarDropdownToggle>
+                        <!--
+                        <BarDropdownMenu>
+
+                            <BarDropdownItem>Action</BarDropdownItem>
+                        </BarDropdownMenu>
+                        -->
+                    </BarDropdown>
+                </BarItem>
+            </BarStart>
+        </BarMenu>
+    </Bar>
+</LayoutSider>
