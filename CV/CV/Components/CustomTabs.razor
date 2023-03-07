@@ -1,0 +1,46 @@
+﻿<Tabs SelectedTab="@SelectedTab" SelectedTabChanged="@OnSelectedTabChanged" Class=@Class>
+    <Items>
+        <Tab Name="techstack">Tech Stack</Tab>
+        <Tab Name="achievements">Achievements</Tab>
+        <Tab Name="thoughts">My Thoughts</Tab>
+    </Items>
+    <Content>
+        <TabPanel Name="techstack">
+            @foreach(var tag in Job.Tags)
+            {
+                <div class="p-2">
+                    <Icon Name="IconName.ChevronRight" TextColor="TextColor.Black50" />
+                    <Span Class="p-2">
+                        @tag
+                    </Span>
+                </div>
+            }
+        </TabPanel>
+        <TabPanel Name="achievements">
+            @foreach(var achievement in Job.Achievements)
+            {
+                <div class="p-2">
+                    @if (IsUri(achievement))
+                    {
+                        <Icon Name="IconName.Star" TextColor="TextColor.Warning"/>
+                        <Span Class="p-2">
+                            <a href="@achievement" target="_blank">@achievement</a>
+                        </Span>
+                    }
+                    else
+                    {
+                        <Icon Name="IconName.Star" TextColor="TextColor.Warning"/>
+                        <Span Class="p-2">
+                            @achievement
+                        </Span>
+                    }
+                </div> 
+            }
+        </TabPanel>
+        <TabPanel Name="thoughts">
+            <Span Class="p-3">
+                @((MarkupString)Markdig.Markdown.ToHtml(Job.Description ?? string.Empty))
+            </Span>
+        </TabPanel>
+    </Content>
+</Tabs>

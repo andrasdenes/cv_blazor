@@ -1,8 +1,8 @@
 ﻿@page "/CV"
 <PageTitle>Career so far</PageTitle>
 <Text Class="h3">My professional career so far</Text>
-<Button Color=Color.Primary>Click<Icon Name="IconName.Download" /></Button>
-<CardDeck Class="mt-3">
+<Icon Class="pl-2 cursor-pointer" Name="IconName.FilePdf" TextColor="TextColor.Danger"/>
+<CardDeck Class="mt-3 p-3">
     @foreach(Job job in Jobs)
     {
         <Card>
@@ -26,11 +26,9 @@
                         <Text TextColor="TextColor.Success">Ongoing</Text>
                     </CardSubtitle>
                 }
-
                 <CardText>
-                    @((MarkupString)Markdig.Markdown.ToHtml(job.Description ?? string.Empty))
+                    <CV.Components.CustomTabs Job="@job" Class="pt-2"></CV.Components.CustomTabs>
                 </CardText>
-                <Button Color="Color.Primary">Button</Button>
             </CardBody>
         </Card>    
     }

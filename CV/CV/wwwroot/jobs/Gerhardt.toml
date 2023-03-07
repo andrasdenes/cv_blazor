@@ -8,14 +8,17 @@ to = 2021.01
 description = """
 I started working at Gerhardt Informatics as an intern in June, 2019. After finishing my internship, 
 I was offered a student position. I mostly worked on 2 projects. One I would Consider an **RPA** project as it was  a chatbot
-for our developers, which we alter wanted to integrate into our communications platform. Essentially, this chatbot would have taken care of
+for our developers, which we later wanted to integrate into our communications platform (Matrix). Essentially, this chatbot would have taken care of
 administrative tasks, thus sparing time for developers. The skills of the cahtbot **use Google APIs** llike Calendar and Drive/Sheets, **Git** and **YouTrack**.
+
 The other project was our own internal communications server. I had a "blueprint" here, but to integrate the chatbot, I needed additional functionality, which I coded myself.
 I also did some **mentoring**. Gradually, new colleagues were introduced to the chatbot development, so that I could keep working on the server-side of things,
 to keep the platform ready for the newest bot versions and skills.
-I have also been **automating deployment processes** for the CMS of the company website, and our **custom identity provider, which was based on Keycloak.**
-For these deployment solutions, I used **jupyter** notebooks, **python** and I also had to transcribe **ansible playbooks**, so I have a rough understanding of that as well.
+
+I have also been **automating deployment processes** for the CMS of the company website (where I'm still listed as an employee haha), and our **custom identity provider, which was based on Keycloak.**
+For these deployment solutions, I used **jupyter** notebooks, hand in hand with **python** and I also had to transcribe **ansible playbooks**, so I have a rough understanding of that as well.
 Last but not least, when I left I was actively working on the **authentication system** of a ridesharing platform, using **Keycloak** and **PHP**.
   
 """
-tags=["python", "Linux", "shell", "mentoring", "jupyter", "web", "API", "nginx", "Go", "caddy", "Keycloak", "SSO", "ansible"]
+achievements = ["Keycloak deployment", "Matrix instance", "Consuming Google APIs", "Asymmetric authentication"]
+tags=["Python", "Linux", "Linux Terminal", "Bash", "Mentoring", "Jupyter", "API", "Nginx", "Go", "Caddy", "Keycloak", "SSO", "Ansible"]

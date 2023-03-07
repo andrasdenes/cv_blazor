@@ -10,6 +10,7 @@
         public string ImageAlt { get; set; }
         public string From { get; set; }
         public string To { get; set; }
+        public List<string> Achievements { get; set; }
         public List<string> Tags { get; set; }
     }
 }
