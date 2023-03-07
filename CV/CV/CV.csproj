@@ -16,8 +16,4 @@
     <PackageReference Include="Tomlyn" Version="0.16.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\blog\" />
-  </ItemGroup>
-
 </Project>

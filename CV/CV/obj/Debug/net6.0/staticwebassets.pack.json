@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\CV.styles.css"
     },
     {
+      "Id": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\blog\\placeholder.cs",
+      "PackagePath": "staticwebassets\\blog\\placeholder.cs"
+    },
+    {
       "Id": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
@@ -83,10 +87,6 @@
     {
       "Id": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\jobs\\SZTE.toml",
       "PackagePath": "staticwebassets\\jobs\\SZTE.toml"
-    },
-    {
-      "Id": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\jobs\\alljobs.toml",
-      "PackagePath": "staticwebassets\\jobs\\alljobs.toml"
     },
     {
       "Id": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\jobs\\jobs.toml",

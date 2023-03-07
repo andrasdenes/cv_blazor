@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VQNYncs+DQrYMCmUMSqaExCV9pLB/3HawyGG4JOlNFM=",
+  "Hash": "Bt8vtW4pwcpCz8oJ6UzYHuFD6OK3/keh2Xfo4bdYM5o=",
   "Source": "CV",
   "BasePath": "/",
   "Mode": "Root",
@@ -7718,6 +7718,23 @@
       "OriginalItemSpec": "D:\\_Source\\cv_blazor\\CV\\CV\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CV.bundle.scp.css"
     },
     {
+      "Identity": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\blog\\placeholder.cs",
+      "SourceId": "CV",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "blog/placeholder.cs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\blog\\placeholder.cs"
+    },
+    {
       "Identity": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\css\\app.css",
       "SourceId": "CV",
       "SourceType": "Discovered",
@@ -7971,23 +7988,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
-    },
-    {
-      "Identity": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\jobs\\alljobs.toml",
-      "SourceId": "CV",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "jobs/alljobs.toml",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\jobs\\alljobs.toml"
     },
     {
       "Identity": "D:\\_Source\\cv_blazor\\CV\\CV\\wwwroot\\jobs\\Evosoft.toml",
