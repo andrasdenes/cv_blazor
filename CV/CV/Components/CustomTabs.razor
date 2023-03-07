@@ -10,7 +10,7 @@
             {
                 <div class="p-2">
                     <Icon Name="IconName.ChevronRight" TextColor="TextColor.Black50" />
-                    <Span Class="p-2">
+                    <Span>
                         @tag
                     </Span>
                 </div>
@@ -23,14 +23,14 @@
                     @if (IsUri(achievement))
                     {
                         <Icon Name="IconName.Star" TextColor="TextColor.Warning"/>
-                        <Span Class="p-2">
+                        <Span>
                             <a href="@achievement" target="_blank">@achievement</a>
                         </Span>
                     }
                     else
                     {
                         <Icon Name="IconName.Star" TextColor="TextColor.Warning"/>
-                        <Span Class="p-2">
+                        <Span>
                             @achievement
                         </Span>
                     }
@@ -38,9 +38,9 @@
             }
         </TabPanel>
         <TabPanel Name="thoughts">
-            <Span Class="p-3">
+            <div class="p-2">
                 @((MarkupString)Markdig.Markdown.ToHtml(Job.Description ?? string.Empty))
-            </Span>
+            </div>
         </TabPanel>
     </Content>
 </Tabs>

@@ -1,7 +1,11 @@
 ﻿@page "/CV"
 <PageTitle>Career so far</PageTitle>
 <Text Class="h3">My professional career so far</Text>
-<Icon Class="pl-2 cursor-pointer" Name="IconName.FilePdf" TextColor="TextColor.Danger"/>
+<Icon Class="pl-2 cursor-pointer" Name="IconName.FilePdf" TextColor="TextColor.Danger" @onclick="ToggleClickMessage"/>
+@if (ShowMessage)
+{
+    <span>Clicked</span>    
+}
 <CardDeck Class="mt-3 p-3">
     @foreach(Job job in Jobs)
     {
