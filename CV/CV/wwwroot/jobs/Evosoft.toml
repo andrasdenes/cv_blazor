@@ -29,4 +29,4 @@ a decent amount of recognition that Evosoft and the city of Szeged decided to ac
 **Blazor**. 
 """
 achievements = ["CI/CD Pipeline (Jenkins)", "IIS hosted REST API and Blazor Client on Windows Server", "Automated data integration", "FutureCity Hackathon - Lakókör"]
-tags = [ "C#", ".NET", "Python", "CI/CD", "Jenkins", "IIS", "Windows Server", "Javascript", "ASP .NET Core", "Blazor", "REST" ]
+tags = [ "C#", ".NET", "Python", "CI/CD", "Jenkins", "IIS", "Windows Server", "Javascript", "ASP .NET Core", "EntityFramework", "Blazor", "REST" ]
