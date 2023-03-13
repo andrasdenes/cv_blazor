@@ -3,8 +3,8 @@ company_name = "Gerhardt Informatics"
 company_url = "https://gerhardt.io"
 image = "https://www.gerhardt.io/media/site/3901309999-1603722353/trans-black-282x68.png"
 image_alt = "gi"
-from = 2019.06
-to = 2021.01
+from = "2019.06"
+to = "2021.01"
 description = """
 I started working at Gerhardt Informatics as an intern in June, 2019. After finishing my internship, 
 I was offered a student position. I mostly worked on 2 projects. One I would Consider an **RPA** project as it was  a chatbot

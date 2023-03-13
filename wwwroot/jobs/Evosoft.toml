@@ -3,7 +3,7 @@ company_name = "Evosoft"
 company_url = "https://evosoft.hu"
 image = "https://i.imgur.com/x0PMuTC.png"
 image_alt = "evo"
-from = 2021.01
+from = "2021.01"
 to = ""
 description = """
 I worked on a **complex engineering software**, and up to this day I still work on some of its components.

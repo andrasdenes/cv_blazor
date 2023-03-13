@@ -3,8 +3,8 @@ company_name = "University of Szeged"
 company_url = "https://www.inf.u-szeged.hu/rgai"
 image = "https://www.inf.u-szeged.hu/sites/default/files/logo_intezet.jpg"
 image_alt = "szte"
-from = 2020.09
-to = 2021.07
+from = "2020.09"
+to = "2021.07"
 description = """
 The job I took at my university required me to develop a deep understanding of **python** and more importantly **Django**.
 Essentially, I was working on a website, that opened up a convenient user interface on top of an AI-driven application.
