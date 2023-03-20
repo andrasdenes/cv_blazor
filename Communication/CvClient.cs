@@ -1,12 +1,8 @@
-﻿using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-
-namespace CV.Communication
+﻿namespace CV.Communication
 {
     public class CvClient : ICvClient
     {
-        public string JobListUrl = "jobs/jobs.toml";
-        public string JobUrl = "jobs/{0}.toml";
+        public string JobListUrl = "api/jobs";
         private HttpClient Client;
         public CvClient(HttpClient httpClient)
         {
@@ -15,14 +11,15 @@ namespace CV.Communication
 
         public async Task<string> GetAllJobs()
         { 
-            string jobList = await Client.GetStringAsync(JobListUrl);
-            return jobList;
-        }
-
-        public async Task<string> GetJobDetails(string companyName)
-        { 
-            string jobDetails = await Client.GetStringAsync(string.Format(JobUrl,companyName));
-            return jobDetails;
+            HttpResponseMessage response = await Client.GetAsync(JobListUrl);
+            if (response != null)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            else
+            { 
+                return string.Empty;
+            }
         }
     }
 }

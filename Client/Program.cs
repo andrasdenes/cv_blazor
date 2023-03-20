@@ -11,7 +11,7 @@ namespace CV
             builder.Services.AddHttpClient<ICvClient, CvClient>(
                 client=>
                 {
-                    client.BaseAddress = new Uri(Environment.GetEnvironmentVariable("ServerUri") ?? "https://localhost:7064");
+                    client.BaseAddress = new Uri(Environment.GetEnvironmentVariable("ServerUri") ?? "https://localhost:7289");
                     client.DefaultRequestHeaders.Add("Cache-Control", "no-cache");
                 }
                 );

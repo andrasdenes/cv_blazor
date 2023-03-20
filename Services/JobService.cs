@@ -11,19 +11,16 @@ namespace CV.Services
             CvClient = cvClient ?? throw new ArgumentNullException(nameof(cvClient));
         }
 
-        public async Task<List<string>> GetAllJobs()
+        public async Task<string> GetAllJobs()
         {
             string allJobs = await CvClient.GetAllJobs();
-            var toml = Tomlyn.Toml.ToModel(allJobs);
-            var found = toml["jobs"];
-            return TomlTableToStringList(found);
+            
+            return allJobs;
         }
 
-        public async Task<Job> GetJobDetails(string companyName)
+        public void GetJobDetails(string companyName)
         {
-            string jobDetails = await CvClient.GetJobDetails(companyName);
-            var job = Tomlyn.Toml.ToModel<Job>(jobDetails);
-            return job;
+
         }
 
         private List<string> TomlTableToStringList(object tomlArray) 
