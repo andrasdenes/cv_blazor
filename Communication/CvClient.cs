@@ -1,4 +1,6 @@
-﻿namespace CV.Communication
+﻿using Newtonsoft.Json;
+
+namespace CV.Communication
 {
     public class CvClient : ICvClient
     {
@@ -9,16 +11,17 @@
             Client = httpClient;
         }
 
-        public async Task<string> GetAllJobs()
+        public async Task<JobCollection> GetAllJobs()
         { 
             HttpResponseMessage response = await Client.GetAsync(JobListUrl);
             if (response != null)
             {
-                return await response.Content.ReadAsStringAsync();
+                var responseJson = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<JobCollection>(responseJson);
             }
             else
             { 
-                return string.Empty;
+                return new JobCollection();
             }
         }
     }

@@ -11,9 +11,9 @@ namespace CV.Services
             CvClient = cvClient ?? throw new ArgumentNullException(nameof(cvClient));
         }
 
-        public async Task<string> GetAllJobs()
+        public async Task<JobCollection> GetAllJobs()
         {
-            string allJobs = await CvClient.GetAllJobs();
+            var allJobs = await CvClient.GetAllJobs();
             
             return allJobs;
         }

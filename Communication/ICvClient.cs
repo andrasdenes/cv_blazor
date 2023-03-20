@@ -2,6 +2,6 @@
 {
     public interface ICvClient
     {
-        Task<string> GetAllJobs();
+        Task<JobCollection> GetAllJobs();
     }
 }

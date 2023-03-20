@@ -2,7 +2,7 @@
 {
     public interface IJobService
     {
-        Task<string> GetAllJobs();
+        Task<JobCollection> GetAllJobs();
         void GetJobDetails(string companyName);
     }
 }

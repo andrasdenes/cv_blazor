@@ -1,4 +1,5 @@
-﻿@page "/CV"
+﻿@page "/career"
+@page "/"
 <PageTitle>Career so far</PageTitle>
 <Text Class="h3">My professional career so far</Text>
 <Icon Class="pl-2 cursor-pointer" Name="IconName.FilePdf" TextColor="TextColor.Danger" @onclick="ToggleClickMessage"/>
@@ -7,33 +8,46 @@
     <span>Sadly, this doesn't work yet :(</span>    
 }
 <CardDeck Class="mt-3 p-3">
-    @foreach(Job job in Jobs)
+    @if(JobCollection == null)
     {
-        <Card>
-            <CardImage Source="@job.Image" Alt="@job.ImageAlt"></CardImage>
-            <CardBody>
-                <CardTitle Size="5">
-                    @job.JobTitle @@ <a href="@job.CompanyUrl" target="_blank">@job.CompanyName</a>
-                </CardTitle>
-                <CardSubtitle Class="p-1">
-                    From: @job.From
-                </CardSubtitle>
-                @if (!string.IsNullOrEmpty(job.To))
-                {
+        @foreach (var num in Enumerable.Range(0, 3))
+        {
+            <Card>
+                <CardImage Source="https://thumbs.gfycat.com/GeneralUnpleasantApisdorsatalaboriosa-size_restricted.gif" Alt="loading..."></CardImage>
+                <CardBody></CardBody>
+            </Card>   
+        }
+    }
+    else
+    {
+        @foreach(Job job in JobCollection.Collection)
+        {
+            <Card>
+                <CardImage Source="@job.Image.ToString()" Alt="@job.ImageAlt"></CardImage>
+                <CardBody>
+                    <CardTitle Size="5">
+                        @job.JobTitle @@ <a href="@job.CompanyUrl" target="_blank">@job.CompanyName</a>
+                    </CardTitle>
                     <CardSubtitle Class="p-1">
-                        To: @job.To
+                        From: @job.From
                     </CardSubtitle>
-                }
-                else
-                {
-                    <CardSubtitle Class="p-1">
-                        <Text TextColor="TextColor.Success">Ongoing</Text>
-                    </CardSubtitle>
-                }
-                <CardText>
-                    <CV.Components.CustomTabs Job="@job" Class="pt-2"></CV.Components.CustomTabs>
-                </CardText>
-            </CardBody>
-        </Card>    
+                    @if (!string.IsNullOrEmpty(job.To))
+                    {
+                        <CardSubtitle Class="p-1">
+                            To: @job.To
+                        </CardSubtitle>
+                    }
+                    else
+                    {
+                        <CardSubtitle Class="p-1">
+                            <Text TextColor="TextColor.Success">Ongoing</Text>
+                        </CardSubtitle>
+                    }
+                    <CardText>
+                        <CV.Components.CustomTabs Job="@job" Class="pt-2"></CV.Components.CustomTabs>
+                    </CardText>
+                </CardBody>
+            </Card>    
+        }
     }
 </CardDeck>

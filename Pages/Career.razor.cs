@@ -1,19 +1,16 @@
-﻿namespace CV.Pages
+﻿#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+namespace CV.Pages
 {
     public partial class Career
     {
         [Inject]
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public IJobService JobService { get; set; }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public List<Job> Jobs { get; set; } = new List<Job>();
-
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public JobCollection JobCollection { get; set; }
         public string CompanyName { get; set; }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public bool ShowMessage { get; set; } = false;
         protected override async Task OnInitializedAsync()
         {
+            JobCollection = await JobService.GetAllJobs();
         }
 
         private string Markdown(string md)
