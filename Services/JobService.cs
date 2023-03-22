@@ -1,6 +1,4 @@
-﻿using Tomlyn.Model;
-
-namespace CV.Services
+﻿namespace CV.Services
 {
     public class JobService : IJobService
     {
@@ -14,31 +12,19 @@ namespace CV.Services
         public async Task<JobCollection> GetAllJobs()
         {
             var allJobs = await CvClient.GetAllJobs();
-            
+
             return allJobs;
+        }
+
+        public async Task<string> GetGeneratedPdf()
+        {
+            string pdf = await CvClient.GetGeneratedPdf();
+            return pdf;
         }
 
         public void GetJobDetails(string companyName)
         {
 
-        }
-
-        private List<string> TomlTableToStringList(object tomlArray) 
-        {
-            List<string> list = new List<string>();
-
-            if (tomlArray == null)
-            {
-                return list;
-            }
-
-            var e = (tomlArray as TomlArray).GetEnumerator();
-
-            while (e.MoveNext())
-            {
-                list.Add(e.Current.ToString());
-            }
-            return list;
         }
     }
 }

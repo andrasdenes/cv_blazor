@@ -1,8 +1,11 @@
 ﻿@page "/career"
 @page "/"
-<PageTitle>Career so far</PageTitle>
+<PageTitle>Career - Dénes András</PageTitle>
 <Text Class="h3">My professional career so far</Text>
-<Icon Class="pl-2 cursor-pointer" Name="IconName.FilePdf" TextColor="TextColor.Danger" @onclick="ToggleClickMessage"/>
+@if (GeneratedPdf != null)
+{
+    <a href="data:application/pdf;base64,@(GeneratedPdf)" download="DenesAndras.pdf"><Icon Class="pl-2 cursor-pointer" Name="IconName.FilePdf" TextColor="TextColor.Danger"/></a>
+}
 @if (ShowMessage)
 {
     <span>Sadly, this doesn't work yet :(</span>    

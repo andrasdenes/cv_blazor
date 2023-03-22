@@ -4,5 +4,6 @@
     {
         Task<JobCollection> GetAllJobs();
         void GetJobDetails(string companyName);
+        Task<string> GetGeneratedPdf();
     }
 }
